@@ -49,12 +49,7 @@ class APIConnector {
     if (Object.keys(params).length) axiosParams.params = params
     if (Object.keys(payload).length) axiosParams.data = payload
  
-    try {
-      return await this.api(axiosParams)
-    }
-    catch(e) {
-      console.error('AC-API-Connector | %s/%s/%s | Failed %s', method, controller, action, e?.message)
-    }
+    return await this.api(axiosParams)
   }
 
 }
