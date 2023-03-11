@@ -48,8 +48,10 @@ class APIConnector {
     }
     if (Object.keys(params).length) axiosParams.params = params
     if (Object.keys(payload).length) axiosParams.data = payload
- 
-    return await this.api(axiosParams)
+    
+    const { status, statusText, responseHeaders, data } = await this.api(axiosParams)
+    const response = { status, statusText, headers: responseHeaders, data }
+    return response
   }
 
 }
