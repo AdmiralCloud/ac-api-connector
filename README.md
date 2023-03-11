@@ -1,7 +1,7 @@
 # ac-api-connector
 Use this class to connect to AdmiralCloud APIs
 
-[![Node.js CI](https://github.com/AdmiralCloud/# ac-api-connector/actions/workflows/node.js.yml/badge.svg)](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/node.js.yml/badge.svg)](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/node.js.yml)
 
 ## Usage
 Init a class instance with your app's clientId and accessKey and accessSecret from your app or from a user.
