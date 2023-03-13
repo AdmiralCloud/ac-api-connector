@@ -2,20 +2,23 @@ const { expect } = require('chai')
 const accon = require('./index')
 const acsignature = require('ac-signature')
 
-const apiConfig = {
-  clientId: 'abc',
-  accessKey: 'my-access-key',
-  accessSecret: 'my-access-secret',
-  headers: {
-    'x-admiralcloud-test': true,
-  }
-}
-const apiConnector = new accon(apiConfig)
-
-const controller = 'bootstrap'
-const action = 'find'
-
 describe('Try API connecion', () => {
+  const controller = 'bootstrap'
+  const action = 'find'
+  const apiConfig = {
+    clientId: 'abc',
+    accessKey: 'my-access-key',
+    accessSecret: 'my-access-secret',
+    headers: {
+      'x-admiralcloud-test': true,
+    }
+  }
+  let apiConnector
+
+  it('Prepare connector', (done) => {
+    apiConnector = new accon(apiConfig)
+    done()
+  })
   it('Try to connect', async() => {
     let response = await apiConnector.callAPI({ 
       path: '/',
@@ -23,7 +26,7 @@ describe('Try API connecion', () => {
       action,
       identifier: 'my-identifier'
     })
-    let headers = response?.config?.headers
+    const headers = response?.headers
     expect(headers).to.have.property('x-admiralcloud-test', 'true')
     expect(headers).to.have.property('x-admiralcloud-clientid', apiConfig.clientId)
     expect(headers).to.have.property('x-admiralcloud-accesskey', apiConfig.accessKey)
@@ -37,8 +40,8 @@ describe('Try API connecion', () => {
   })
 
   it('Check that signature is sent properly', async() => {
-    let query = { id: 123 }
-    let body = { title: 'my_title' }
+    const query = { id: 123 }
+    const body = { title: 'my_title' }
 
     const signParams = {
       accessSecret: apiConfig.accessSecret,
@@ -48,7 +51,7 @@ describe('Try API connecion', () => {
     }
     const signedValues = acsignature.sign(signParams)
 
-    let response = await apiConnector.callAPI({ 
+    const response = await apiConnector.callAPI({ 
       path: '/',
       controller,
       action,
@@ -56,7 +59,7 @@ describe('Try API connecion', () => {
       params: query, 
       payload: body
     })
-    let headers = response?.config?.headers
+    const headers = response?.headers
     expect(headers).to.have.property('x-admiralcloud-test', 'true')
     expect(headers).to.have.property('x-admiralcloud-clientid', apiConfig.clientId)
     expect(headers).to.have.property('x-admiralcloud-accesskey', apiConfig.accessKey)
