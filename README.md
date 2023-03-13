@@ -7,8 +7,10 @@ Use this class to connect to AdmiralCloud APIs
 Init a class instance with your app's clientId and accessKey and accessSecret from your app or from a user.
 
 ```
+const accon = require('ac-api-connector')
+
 const apiConfig = {
-  baseUrl: 'url-of-the-api' // defaults to https://api.admiralcloud.com
+  baseURL: 'url-of-the-api' // defaults to https://api.admiralcloud.com
   clientId: 'abc',
   accessKey: 'my-access-key',
   accessSecret: 'my-access-secret'

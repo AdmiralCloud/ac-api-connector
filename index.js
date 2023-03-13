@@ -27,7 +27,7 @@ class APIConnector {
       accessSecret: this.accessSecret,
       controller,
       action,
-      payload: Object.assign(params, payload) // BODY payload takes precedence
+      payload: Object.assign(JSON.parse(JSON.stringify(params)), payload) // BODY payload takes precedence
     }
     const signedValues = acsignature.sign(signParams)
 
