@@ -21,7 +21,7 @@ class APIConnector {
     this.accessSecret = accessSecret
   }
 
-  async callAPI({ method = 'get', path, controller, action, params = {}, payload = {}, headers = {}, identifier }) {
+  async request({ method = 'get', path, controller, action, params = {}, payload = {}, headers = {}, identifier }) {
 
     const signParams = {
       accessSecret: this.accessSecret,

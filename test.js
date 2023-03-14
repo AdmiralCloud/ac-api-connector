@@ -20,7 +20,7 @@ describe('Try API connecion', () => {
     done()
   })
   it('Try to connect', async() => {
-    let response = await apiConnector.callAPI({ 
+    let response = await apiConnector.request({ 
       path: '/',
       controller,
       action,
@@ -51,7 +51,7 @@ describe('Try API connecion', () => {
     }
     const signedValues = acsignature.sign(signParams)
 
-    const response = await apiConnector.callAPI({ 
+    const response = await apiConnector.request({ 
       path: '/',
       controller,
       action,

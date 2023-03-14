@@ -20,7 +20,7 @@ const apiConnector = new accon(apiConfig)
 
 You can now use this connector for calls against the API.
 ```
-let response = await apiConnector.callAPI({ 
+let response = await apiConnector.request({ 
   path: '/v5/me',
   controller,
   action,
