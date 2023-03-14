@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "git@github.com:AdmiralCloud/ac-api-connector.git",
   "author": "Mark Poepping (www.admiralcloud.com)",
+  "contributors": [
+    "Virginijus Digrys (https://www.admiralcloud.com)"
+  ],
   "license": "MIT",
   "dependencies": {
     "ac-signature": "^3.0.0",
