@@ -1,3 +1,18 @@
+<a name="0.1.1"></a>
+
+## [0.1.1](https://github.com/admiralcloud/ac-api-connector/compare/v0.1.0..v0.1.1) (2023-03-17 19:10:17)
+
+
+### Bug Fix
+
+* **Connector:** Add debug mode | MP | [5f179487db433cf2aac9a29a2783cbc7da3a522d](https://github.com/admiralcloud/ac-api-connector/commit/5f179487db433cf2aac9a29a2783cbc7da3a522d)    
+Add debug mode. Added test to check that socket is re-used.  
+Related issues: [undefined/undefined#develop](undefined/browse/develop)
+### Documentation
+
+* **Connector:** Updated contributors | MP | [d06e8fd8a1268777fd1dc2f318e7ea039f8d4dd2](https://github.com/admiralcloud/ac-api-connector/commit/d06e8fd8a1268777fd1dc2f318e7ea039f8d4dd2)    
+Updated contributors  
+Related issues: [undefined/undefined#master](undefined/browse/master)
 <a name="0.1.0"></a>
  
 # [0.1.0](https://github.com/admiralcloud/ac-api-connector/compare/..v0.1.0) (2023-03-14 17:28:40)
