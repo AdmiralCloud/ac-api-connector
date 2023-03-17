@@ -3,12 +3,13 @@ const acsignature = require('ac-signature')
 const axios = require('axios')
 
 class APIConnector {
-  constructor({ baseURL = 'https://api.admiralcloud.com', maxCachedSession, clientId, accessKey, accessSecret, headers = {} }) {
+  constructor({ baseURL = 'https://api.admiralcloud.com', maxCachedSessions, clientId, accessKey, accessSecret, headers = {}, debug }) {
     const httpOptions = {
       keepAlive: true
     }
-    if (maxCachedSession) httpOptions.maxCachedSession = maxCachedSession
+    if (maxCachedSessions) httpOptions.maxCachedSessions = maxCachedSessions
     const httpsAgent = new https.Agent(httpOptions)
+    this.httpsAgent = httpsAgent
 
     this.api = axios.create({
       baseURL,
@@ -19,9 +20,10 @@ class APIConnector {
     this.clientId = clientId
     this.accessKey = accessKey
     this.accessSecret = accessSecret
+    this.debug = debug
   }
 
-  async request({ method = 'get', path, controller, action, params = {}, payload = {}, headers = {}, identifier }) {
+  async request({ method = 'get', path, controller, action, params = {}, payload = {}, headers = {}, identifier, debug }) {
 
     const signParams = {
       accessSecret: this.accessSecret,
@@ -49,9 +51,18 @@ class APIConnector {
     if (Object.keys(params).length) axiosParams.params = params
     if (Object.keys(payload).length) axiosParams.data = payload
     
-    const pick = ({ status, statusText, config, data }) => ({ status, statusText, headers: config?.headers, data })
+    if (this.debug || debug) {
+      console.log('ac-api-connector | Request | %j', axiosParams)
+    }
+
+    const pick = ({ status, statusText, headers, config, data }) => ({ status, statusText, responseHeaders: headers, headers: config?.headers, data })
     const response = await this.api(axiosParams)
     const filteredResponse = pick(response)
+
+    if (this.debug || debug) {
+      console.log('ac-api-connector | Response | Status %s | Reuse socket %s | Total sockets %s', response?.status, response?.request?.reusedSocket, this.httpsAgent?.totalSocketCount)
+      filteredResponse.reuseSocket = response?.request?.reusedSocket
+    }
 
     return filteredResponse
   }
