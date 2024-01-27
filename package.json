@@ -10,12 +10,12 @@
   "license": "MIT",
   "dependencies": {
     "ac-signature": "^3.0.0",
-    "axios": "^1.6.2"
+    "axios": "^1.6.7"
   },
   "devDependencies": {
     "ac-semantic-release": "^0.4.2",
     "chai": "^4.3.10",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "mocha": "^10.2.0"
   },
   "scripts": {
