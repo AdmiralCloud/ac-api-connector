@@ -1,3 +1,13 @@
+<a name="0.1.8"></a>
+
+## [0.1.8](https://github.com/admiralcloud/ac-api-connector/compare/v0.1.7..v0.1.8) (2024-05-05 14:10:32)
+
+
+### Bug Fix
+
+* **Connector:** Allow class init without parameters | MP | [01ac3f241cd9bb915367807478ae439904dd9cb2](https://github.com/admiralcloud/ac-api-connector/commit/01ac3f241cd9bb915367807478ae439904dd9cb2)    
+Allow class init without parameters  
+Related issues: [undefined/undefined#master](undefined/browse/master)
 <a name="0.1.7"></a>
 
 ## [0.1.7](https://github.com/admiralcloud/ac-api-connector/compare/v0.1.6..v0.1.7) (2024-03-26 19:40:41)
