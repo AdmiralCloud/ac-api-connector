@@ -3,7 +3,7 @@ const acsignature = require('ac-signature')
 const axios = require('axios')
 
 class APIConnector {
-  constructor({ baseURL = 'https://api.admiralcloud.com', maxCachedSessions, clientId, accessKey, accessSecret, headers = {}, debug }) {
+  constructor({ baseURL = 'https://api.admiralcloud.com', maxCachedSessions, clientId, accessKey, accessSecret, headers = {}, debug } = {}) {
     const httpOptions = {
       keepAlive: true
     }
