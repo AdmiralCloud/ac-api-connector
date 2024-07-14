@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+
+## [1.0.1](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.0..v1.0.1) (2024-07-14 13:18:41)
+
+
+### Bug Fix
+
+* **Connector:** Make sure signature version 5 is used | MP | [7e686e36ce535bb9e9f1f0940daca09aa3e63850](https://github.com/admiralcloud/ac-api-connector/commit/7e686e36ce535bb9e9f1f0940daca09aa3e63850)    
+Use signature 5 and honor debug parameter  
+Related issues: [undefined/undefined#master](undefined/browse/master)
 <a name="1.0.0"></a>
  
 # [1.0.0](https://github.com/admiralcloud/ac-api-connector/compare/v0.1.9..v1.0.0) (2024-07-14 10:22:05)
