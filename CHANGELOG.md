@@ -1,3 +1,28 @@
+<a name="1.0.0"></a>
+ 
+# [1.0.0](https://github.com/admiralcloud/ac-api-connector/compare/v0.1.9..v1.0.0) (2024-07-14 10:22:05)
+
+
+### Bug Fix
+
+* **Connector:** Use signature version 5 | MP | [f9fbb0a8903878c0125993de45417005f5a8984d](https://github.com/admiralcloud/ac-api-connector/commit/f9fbb0a8903878c0125993de45417005f5a8984d)    
+Use version 5 signing from ac-signature  
+Related issues: [undefined/undefined#master](undefined/browse/master)
+### Chores
+
+* **Connector:** Fixed Github workflows | MP | [9d41f9e15ad44fb4aba15c750d24de8980a90e36](https://github.com/admiralcloud/ac-api-connector/commit/9d41f9e15ad44fb4aba15c750d24de8980a90e36)    
+Fixed Github workflows  
+Related issues: [undefined/undefined#master](undefined/browse/master)
+* **Misc:** Minor adjustments | MP | [3b359ecf7c7fde2624b38dccd12ba20ba74f4967](https://github.com/admiralcloud/ac-api-connector/commit/3b359ecf7c7fde2624b38dccd12ba20ba74f4967)    
+Minor adjustments  
+Related issues: [undefined/undefined#master](undefined/browse/master)
+### Chores
+
+* **Connector:** Updated packages | MP | [a905569d81967bc0ca14a2f1a3383a80d021b451](https://github.com/admiralcloud/ac-api-connector/commit/a905569d81967bc0ca14a2f1a3383a80d021b451)    
+Updated packages  
+Related issues: [undefined/undefined#master](undefined/browse/master)
+## BREAKING CHANGES
+* **Connector:** Use version 5 signing from ac-signature - it works without controller and action and requires path
 <a name="0.1.9"></a>
 
 ## [0.1.9](https://github.com/admiralcloud/ac-api-connector/compare/v0.1.8..v0.1.9) (2024-06-05 15:09:31)
