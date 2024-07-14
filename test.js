@@ -3,8 +3,6 @@ const accon = require('./index')
 const acsignature = require('ac-signature')
 
 describe('Try API connecion', () => {
-  const controller = 'bootstrap'
-  const action = 'find'
   const apiConfig = {
     clientId: 'abc',
     accessKey: 'my-access-key',
@@ -22,8 +20,6 @@ describe('Try API connecion', () => {
   it('Try to connect', async() => {
     let response = await apiConnector.request({ 
       path: '/',
-      controller,
-      action,
       identifier: 'my-identifier'
     })
     const headers = response?.headers
@@ -42,8 +38,6 @@ describe('Try API connecion', () => {
   it('Try to connect again using the same socket', async() => {
     let response = await apiConnector.request({ 
       path: '/',
-      controller,
-      action,
       identifier: 'my-identifier',
       debug: true
     })
@@ -66,17 +60,15 @@ describe('Try API connecion', () => {
     const body = { title: 'my_title' }
 
     const signParams = {
+      path: '/',
       accessSecret: apiConfig.accessSecret,
-      controller,
-      action,
-      payload: Object.assign(query, body)
+      payload: Object.assign(query, body),
+      identifier: 'my-identifier'
     }
-    const signedValues = acsignature.sign(signParams)
+    const signedValues = acsignature.sign5(signParams)
 
     const response = await apiConnector.request({ 
       path: '/',
-      controller,
-      action,
       identifier: 'my-identifier',
       params: query, 
       payload: body

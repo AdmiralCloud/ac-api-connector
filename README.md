@@ -3,6 +3,12 @@ Use this class to connect to AdmiralCloud APIs
 
 [![Node.js CI](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/node.js.yml/badge.svg)](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/node.js.yml)
 
+# BREAKING CHANGES Version 1
+Starting with version 1 we use ac-signature with signature version 5 which does not require controller and action but use the path instead.
+
+Note: With signature version 5, the identifier is also part of the signed payload, which makes the request even more secure.
+
+
 ## Usage
 Init a class instance with your app's clientId and accessKey and accessSecret from your app or from a user.
 
@@ -22,9 +28,14 @@ You can now use this connector for calls against the API.
 ```
 let response = await apiConnector.request({ 
   path: '/v5/me',
-  controller,
-  action,
-  identifier: 'my-identifier'
+  identifier: 'my-identifier',
+  payload: {
+    prop1: 'abc,
+    prop2: 123,
+    prop3: {
+      subproc1: 'xyz'
+    }
+  }
 })
 ```
 
@@ -33,7 +44,6 @@ let response = await apiConnector.request({
 
 # Links
 - [Website](https://www.admiralcloud.com/)
-- [Facebook](https://www.facebook.com/MediaAssetManagement/)
 
 # Run tests
 ```

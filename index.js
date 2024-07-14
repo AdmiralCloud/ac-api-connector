@@ -23,15 +23,17 @@ class APIConnector {
     this.debug = debug
   }
 
-  async request({ method = 'get', path, controller, action, params = {}, payload = {}, headers = {}, identifier, debug }) {
+  async request({ method = 'get', path, params = {}, payload = {}, headers = {}, identifier, debug }) {
 
     const signParams = {
       accessSecret: this.accessSecret,
-      controller,
-      action,
+      path,
       payload: Object.assign(JSON.parse(JSON.stringify(params)), payload) // BODY payload takes precedence
     }
-    const signedValues = acsignature.sign(signParams)
+    if (identifier) {
+      signParams.identifier = identifier
+    }
+    const signedValues = acsignature.sign5(signParams)
 
     Object.assign(headers, {
       'x-admiralcloud-clientid': this.clientId,
@@ -52,7 +54,7 @@ class APIConnector {
     if (Object.keys(payload).length) axiosParams.data = payload
     
     if (this.debug || debug) {
-      console.log('ac-api-connector | Request | %j', axiosParams)
+      console.info('ac-api-connector | Request | %j', axiosParams)
     }
 
     const pick = ({ status, statusText, headers, config, data }) => ({ status, statusText, responseHeaders: headers, headers: config?.headers, data })
@@ -60,7 +62,7 @@ class APIConnector {
     const filteredResponse = pick(response)
 
     if (this.debug || debug) {
-      console.log('ac-api-connector | Response | Status %s | Reuse socket %s | Total sockets %s', response?.status, response?.request?.reusedSocket, this.httpsAgent?.totalSocketCount)
+      console.info('ac-api-connector | Response | Status %s | Reuse socket %s | Total sockets %s', response?.status, response?.request?.reusedSocket, this.httpsAgent?.totalSocketCount)
       filteredResponse.reuseSocket = response?.request?.reusedSocket
     }
 
