@@ -28,7 +28,8 @@ class APIConnector {
     const signParams = {
       accessSecret: this.accessSecret,
       path,
-      payload: Object.assign(JSON.parse(JSON.stringify(params)), payload) // BODY payload takes precedence
+      payload: Object.assign(JSON.parse(JSON.stringify(params)), payload), // BODY payload takes precedence
+      debug
     }
     if (identifier) {
       signParams.identifier = identifier
@@ -40,6 +41,7 @@ class APIConnector {
       'x-admiralcloud-accesskey': this.accessKey,
       'x-admiralcloud-rts': signedValues.timestamp,
       'x-admiralcloud-hash': signedValues.hash,
+      'x-admiralcloud-version': 5
     })
     if (identifier) {
       headers['x-admiralcloud-identifier'] = identifier
