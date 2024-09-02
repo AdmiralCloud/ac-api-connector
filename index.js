@@ -46,6 +46,9 @@ class APIConnector {
     if (identifier) {
       headers['x-admiralcloud-identifier'] = identifier
     }
+    if (this.debug || debug) {
+      headers['x-admiralcloud-debugsignature'] = true
+    }
 
     const axiosParams = {
       method,
