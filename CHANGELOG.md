@@ -1,3 +1,18 @@
+<a name="1.0.3"></a>
+
+## [1.0.3](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.2..v1.0.3) (2024-09-02 17:02:13)
+
+
+### Bug Fix
+
+* **Connector:** Improved debug mode | MP | [7926e0c7d7ae67a0a9a8429b8c2b0a15e72c0627](https://github.com/admiralcloud/ac-api-connector/commit/7926e0c7d7ae67a0a9a8429b8c2b0a15e72c0627)    
+Send debug information to signature decoder  
+Related issues: [undefined/undefined#develop](undefined/browse/develop)
+### Chores
+
+* **Connector:** Updated packages | MP | [4300685e245635ef85bbafbb4f16ee7bcc2c8335](https://github.com/admiralcloud/ac-api-connector/commit/4300685e245635ef85bbafbb4f16ee7bcc2c8335)    
+Updated packages  
+Related issues: [undefined/undefined#develop](undefined/browse/develop)
 <a name="1.0.2"></a>
 
 ## [1.0.2](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.1..v1.0.2) (2024-08-14 08:28:29)
