@@ -144,10 +144,10 @@ ac-semantic-release@^0.4.2:
     inquirer "8.2.5"
     lodash "^4.17.21"
 
-ac-signature@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/ac-signature/-/ac-signature-4.0.0.tgz#b85ee60fc26047d24c16894f281e14ec50afefe7"
-  integrity sha512-GMT36Ahpgax7cRz6gFoobhzaQOdGsu3e+7UjwgFjCDligtWAugRYmh+yOon4nYpE1o/xKOZw32Vrvzyg/LAjRQ==
+ac-signature@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/ac-signature/-/ac-signature-4.0.1.tgz#87b696cd2564632c84aae65883aeed27c420ed5e"
+  integrity sha512-02lVuCAUhba6wC/cayIfOjeFe8y3bJutCC0rZ2chzpp+oTtjIYgqGTEgKLCZYMzocQcrp73mUyxReoFWMZFQvQ==
   dependencies:
     lodash "^4.17.21"
 
