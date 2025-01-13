@@ -22,7 +22,10 @@ module.exports = [
       'no-useless-escape': 'off',
       'standard/no-callback-literal': 'off',
       'new-cap': 'off',
-      'no-console': ['error', { allow: ['info', 'warn', 'error'] }]
+      'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
+      // allow require style
+      '@typescript-eslint/no-require-imports': 'off',
+      'no-require-imports': 'off'
     }
   }
 ];
