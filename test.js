@@ -2,6 +2,8 @@ const { expect } = require('chai')
 const accon = require('./index')
 const acsignature = require('ac-signature')
 
+
+
 describe('Try API connecion', () => {
   const apiConfig = {
     clientId: 'abc',
@@ -11,6 +13,22 @@ describe('Try API connecion', () => {
       'x-admiralcloud-test': true,
     }
   }
+
+  const expectedResponse = (response) => {
+    const { headers, data } = response
+    expect(headers).to.have.property('x-admiralcloud-test', 'true')
+    expect(headers).to.have.property('x-admiralcloud-clientid', apiConfig.clientId)
+    expect(headers).to.have.property('x-admiralcloud-accesskey', apiConfig.accessKey)
+    expect(headers).not.to.have.property('x-admiralcloud-accesssecret')
+    expect(headers).to.have.property('x-admiralcloud-rts')
+    expect(headers).to.have.property('x-admiralcloud-hash')
+    expect(headers).to.have.property('x-admiralcloud-identifier', 'my-identifier')
+
+    // response from API 
+    expect(data).to.have.property('version')
+  }
+
+
   let apiConnector
 
   it('Prepare connector', (done) => {
@@ -18,40 +36,20 @@ describe('Try API connecion', () => {
     done()
   })
   it('Try to connect', async() => {
-    let response = await apiConnector.request({ 
+    const response = await apiConnector.request({ 
       path: '/',
       identifier: 'my-identifier'
     })
-    const headers = response?.headers
-    expect(headers).to.have.property('x-admiralcloud-test', 'true')
-    expect(headers).to.have.property('x-admiralcloud-clientid', apiConfig.clientId)
-    expect(headers).to.have.property('x-admiralcloud-accesskey', apiConfig.accessKey)
-    expect(headers).not.to.have.property('x-admiralcloud-accesssecret')
-    expect(headers).to.have.property('x-admiralcloud-rts')
-    expect(headers).to.have.property('x-admiralcloud-hash')
-    expect(headers).to.have.property('x-admiralcloud-identifier', 'my-identifier')
-
-    // response from API 
-    expect(response?.data).to.have.property('version')
+    expectedResponse(response)
   })
 
   it('Try to connect again using the same socket', async() => {
-    let response = await apiConnector.request({ 
+    const response = await apiConnector.request({ 
       path: '/',
       identifier: 'my-identifier',
       debug: true
     })
-    const headers = response?.headers
-    expect(headers).to.have.property('x-admiralcloud-test', 'true')
-    expect(headers).to.have.property('x-admiralcloud-clientid', apiConfig.clientId)
-    expect(headers).to.have.property('x-admiralcloud-accesskey', apiConfig.accessKey)
-    expect(headers).not.to.have.property('x-admiralcloud-accesssecret')
-    expect(headers).to.have.property('x-admiralcloud-rts')
-    expect(headers).to.have.property('x-admiralcloud-hash')
-    expect(headers).to.have.property('x-admiralcloud-identifier', 'my-identifier')
-
-    // response from API 
-    expect(response?.data).to.have.property('version')
+    expectedResponse(response)
     expect(response?.reuseSocket).to.be.true
   })
 
@@ -73,16 +71,7 @@ describe('Try API connecion', () => {
       params: query, 
       payload: body
     })
-    const headers = response?.headers
-    expect(headers).to.have.property('x-admiralcloud-test', 'true')
-    expect(headers).to.have.property('x-admiralcloud-clientid', apiConfig.clientId)
-    expect(headers).to.have.property('x-admiralcloud-accesskey', apiConfig.accessKey)
-    expect(headers).not.to.have.property('x-admiralcloud-accesssecret')
-    expect(headers).to.have.property('x-admiralcloud-rts')
-    expect(headers).to.have.property('x-admiralcloud-hash', signedValues.hash)
-    expect(headers).to.have.property('x-admiralcloud-identifier', 'my-identifier')
-
-    // response from API 
-    expect(response?.data).to.have.property('version')
+    expectedResponse(response)
+    expect(response?.headers).to.have.property('x-admiralcloud-hash', signedValues.hash)
   })
 })
