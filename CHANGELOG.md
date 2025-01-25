@@ -1,3 +1,25 @@
+
+## [1.0.5](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.4..v1.0.5) (2025-01-25 10:09:01)
+
+
+### Bug Fix
+
+* **Connector:** Package updates | MP | [961d300d24bca26ad9b17f9b37a777bf7b3f3e51](https://github.com/admiralcloud/ac-api-connector/commit/961d300d24bca26ad9b17f9b37a777bf7b3f3e51)    
+Package updates  
+Related issues:
+* **Connector:** Package update | MP | [fea48c181ab2855cbd6b17fc49421c5af681c5cf](https://github.com/admiralcloud/ac-api-connector/commit/fea48c181ab2855cbd6b17fc49421c5af681c5cf)    
+Package updates  
+Related issues:
+### Tests
+
+* **Connector:** Remove duplicate code from test | MP | [e5e5ff1e082a975e428b4f2166e660c3b77d927b](https://github.com/admiralcloud/ac-api-connector/commit/e5e5ff1e082a975e428b4f2166e660c3b77d927b)    
+Use a function to check expected values  
+Related issues:
+### Chores
+
+* **Connector:** Improved eslint | MP | [ec2da4704ed8e3eb73e2f49fac5292e1982c6d18](https://github.com/admiralcloud/ac-api-connector/commit/ec2da4704ed8e3eb73e2f49fac5292e1982c6d18)    
+Improved eslint - allow require style  
+Related issues:
 <a name="1.0.4"></a>
 
 ## [1.0.4](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.3..v1.0.4) (2024-09-02 18:26:32)
