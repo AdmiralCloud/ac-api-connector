@@ -1,4 +1,18 @@
 
+## [1.0.6](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.5..v1.0.6) (2025-02-10 11:41:34)
+
+
+### Bug Fix
+
+* **Connector:** Allow clientId as part of the request | MP | [b618d3ba03a4ef12f05bd30f1429b928ccf16777](https://github.com/admiralcloud/ac-api-connector/commit/b618d3ba03a4ef12f05bd30f1429b928ccf16777)    
+If you set clientId for a request, this clientId is used instead of the one used during class initiation.  
+Related issues:
+### Chores
+
+* **Misc:** Updated packages | MP | [2b448f89324920d50cd2da5bcaaeab17c503f5e3](https://github.com/admiralcloud/ac-api-connector/commit/2b448f89324920d50cd2da5bcaaeab17c503f5e3)    
+Updated packages  
+Related issues:
+
 ## [1.0.5](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.4..v1.0.5) (2025-01-25 10:09:01)
 
 
