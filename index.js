@@ -23,7 +23,7 @@ class APIConnector {
     this.debug = debug
   }
 
-  async request({ method = 'get', path, params = {}, payload = {}, headers = {}, identifier, debug }) {
+  async request({ method = 'get', path, params = {}, payload = {}, headers = {}, identifier, clientId = this.clientId, debug }) {
 
     const signParams = {
       accessSecret: this.accessSecret,
@@ -37,7 +37,7 @@ class APIConnector {
     const signedValues = acsignature.sign5(signParams)
 
     Object.assign(headers, {
-      'x-admiralcloud-clientid': this.clientId,
+      'x-admiralcloud-clientid': clientId,
       'x-admiralcloud-accesskey': this.accessKey,
       'x-admiralcloud-rts': signedValues.timestamp,
       'x-admiralcloud-hash': signedValues.hash,
