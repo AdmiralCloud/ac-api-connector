@@ -9,7 +9,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "ac-signature": "^4.0.2",
+    "ac-signature": "^4.0.3",
     "axios": "^1.8.4"
   },
   "devDependencies": {
