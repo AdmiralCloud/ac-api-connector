@@ -61,17 +61,25 @@ class APIConnector {
     if (this.debug || debug) {
       console.info('ac-api-connector | Request | %j', axiosParams)
     }
+    try {
+      const pick = ({ status, statusText, headers, config, data }) => ({ status, statusText, responseHeaders: headers, headers: config?.headers, data })
+      const response = await this.api(axiosParams)
+      const filteredResponse = pick(response)
 
-    const pick = ({ status, statusText, headers, config, data }) => ({ status, statusText, responseHeaders: headers, headers: config?.headers, data })
-    const response = await this.api(axiosParams)
-    const filteredResponse = pick(response)
+      if (this.debug || debug) {
+        console.info('ac-api-connector | Response | Status %s | Reuse socket %s | Total sockets %s', response?.status, response?.request?.reusedSocket, this.httpsAgent?.totalSocketCount)
+        filteredResponse.reuseSocket = response?.request?.reusedSocket
+      }
 
-    if (this.debug || debug) {
-      console.info('ac-api-connector | Response | Status %s | Reuse socket %s | Total sockets %s', response?.status, response?.request?.reusedSocket, this.httpsAgent?.totalSocketCount)
-      filteredResponse.reuseSocket = response?.request?.reusedSocket
+      return filteredResponse
     }
-
-    return filteredResponse
+    catch(e) {
+      const error = e?.response?.data?.message || e?.response?.statusText || e?.message || e 
+      const config = e?.response?.config || {}
+      console.error('ac-api-connector | %s %s | %j', config?.method, `${config?.baseURL}${config.url}`, config?.data)
+      console.error('ac-api-connector | Error | %s', error)
+      throw error
+    }
   }
 
 }
