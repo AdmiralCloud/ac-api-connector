@@ -96,4 +96,20 @@ describe('Try API connecion', () => {
     expect(response?.headers).to.have.property('x-admiralcloud-hash', signedValues.hash)
   })
 
+  it('Check error handling for 400 response', async() => {
+    try {
+      await apiConnector.request({
+        path: '/v5/mediacontainer',
+        method: 'post',
+        payload: { type: 'video' }
+      })
+      // If we reach this point, the test should fail because an error was expected
+      expect.fail('Expected an error to be thrown')
+    }
+    catch(error) {
+      // Check that the error message matches the API response
+      expect(error).to.equal('error_mediacontainer_create_appNotFound')
+    }
+  })
+
 })
