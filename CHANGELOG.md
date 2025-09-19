@@ -1,4 +1,23 @@
 
+## [1.0.13](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.12..v1.0.13) (2025-09-19 17:53:54)
+
+
+### Bug Fix
+
+* **Connector:** Improved error handling | MP | [1b065956f7e04d52d771e40d8515e1598663459b](https://github.com/admiralcloud/ac-api-connector/commit/1b065956f7e04d52d771e40d8515e1598663459b)    
+Improved error handling  
+Related issues:
+### Tests
+
+* **Connector:** Added test for error handling | MP | [28309e8d9e8d6ae17c145a4602d8bf5bc8862388](https://github.com/admiralcloud/ac-api-connector/commit/28309e8d9e8d6ae17c145a4602d8bf5bc8862388)    
+Added test for error handling  
+Related issues:
+### Chores
+
+* **Misc:** Updated packages | MP | [839bdc3bdeebcd35a64914392fd9389acfb3d0e1](https://github.com/admiralcloud/ac-api-connector/commit/839bdc3bdeebcd35a64914392fd9389acfb3d0e1)    
+Updated packages  
+Related issues:
+
 ## [1.0.12](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.11..v1.0.12) (2025-09-19 05:22:11)
 
 
