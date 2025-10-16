@@ -23,7 +23,7 @@ class APIConnector {
     this.debug = debug
   }
 
-  async request({ method = 'get', path, params = {}, payload = {}, headers = {}, identifier, clientId = this.clientId, debug }) {
+  async request({ method = 'get', path, params = {}, payload = {}, headers = {}, identifier, clientId = this.clientId, returnError, debug }) {
 
     const signParams = {
       accessSecret: this.accessSecret,
@@ -74,6 +74,8 @@ class APIConnector {
       return filteredResponse
     }
     catch(e) {
+      if (returnError) throw e
+
       const error = e?.response?.data?.message || e?.response?.statusText || e?.message || e 
       const config = e?.response?.config || {}
       console.error('ac-api-connector | %s %s | %j', config?.method, `${config?.baseURL}${config.url}`, config?.data)
