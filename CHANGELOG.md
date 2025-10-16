@@ -1,4 +1,18 @@
 
+## [1.0.14](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.13..v1.0.14) (2025-10-16 07:34:05)
+
+
+### Bug Fix
+
+* **Connector:** add option to bypass request error parsing | VD | [9096385c9a31f3afa51d28b76484bbfcd20c064a](https://github.com/admiralcloud/ac-api-connector/commit/9096385c9a31f3afa51d28b76484bbfcd20c064a)    
+add option to bypass request error parsing  
+Related issues:
+### Chores
+
+* **Misc:** Updated packages | VD | [468a9b6c7089a9647429b15c4b1e845ee5b2371d](https://github.com/admiralcloud/ac-api-connector/commit/468a9b6c7089a9647429b15c4b1e845ee5b2371d)    
+Updated packages  
+Related issues:
+
 ## [1.0.13](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.12..v1.0.13) (2025-09-19 17:53:54)
 
 
