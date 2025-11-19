@@ -10,14 +10,14 @@
   "license": "MIT",
   "dependencies": {
     "ac-signature": "^4.0.8",
-    "axios": "^1.12.2"
+    "axios": "^1.13.2"
   },
   "devDependencies": {
     "ac-semantic-release": "^0.4.8",
     "c8": "^10.1.3",
     "chai": "^4.5.0",
-    "eslint": "^9.37.0",
-    "mocha": "^11.7.4"
+    "eslint": "^9.39.1",
+    "mocha": "^11.7.5"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --slow 1000 --colors ./test.js || :",
