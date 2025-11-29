@@ -308,10 +308,10 @@ ac-semantic-release@^0.4.8:
     inquirer "^12.9.6"
     lodash "^4.17.21"
 
-ac-signature@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/ac-signature/-/ac-signature-4.0.8.tgz#ca80ae05b5dbcf9115c5b8407929ac9c54c15862"
-  integrity sha512-d1l/XjjIf2FWtvt+c8rstvUoOB9gn57qNsZQp3NfvelXRCl9CmvDh/rlCyRjTZXcMGBxC+KNZHil8iTW9lJJSQ==
+ac-signature@^4.0.9:
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/ac-signature/-/ac-signature-4.0.9.tgz#d2be7501e277510885e0801bb507319237f68a67"
+  integrity sha512-pmOKOdGcGp++G+POAU0lH1w4m0Ayc/balHEUZ7ieKeF0Empkgerlnxi2QYYKZC1G0u3YD1wTylPCrtCKZCaqjQ==
   dependencies:
     lodash "^4.17.21"
 
