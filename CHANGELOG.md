@@ -1,4 +1,13 @@
 
+## [1.0.18](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.17..v1.0.18) (2026-02-03 08:37:04)
+
+
+### Bug Fix
+
+* **Connector:** Package updates | MP | [5fc952ebd13f4465aba979c27b8f8d1071bfbb7d](https://github.com/admiralcloud/ac-api-connector/commit/5fc952ebd13f4465aba979c27b8f8d1071bfbb7d)    
+Package updates  
+Related issues:
+
 ## [1.0.17](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.16..v1.0.17) (2026-01-23 08:26:55)
 
 
