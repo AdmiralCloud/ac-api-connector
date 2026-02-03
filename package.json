@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "ac-signature": "^4.0.10",
-    "axios": "^1.13.2"
+    "axios": "^1.13.4"
   },
   "devDependencies": {
     "ac-semantic-release": "^0.4.10",
