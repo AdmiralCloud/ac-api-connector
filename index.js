@@ -7,7 +7,7 @@ class APIConnector {
     const httpOptions = {
       keepAlive: true
     }
-    if (maxCachedSessions) httpOptions.maxCachedSessions = maxCachedSessions
+    if (maxCachedSessions) { httpOptions.maxCachedSessions = maxCachedSessions }
     const httpsAgent = new https.Agent(httpOptions)
     this.httpsAgent = httpsAgent
 
@@ -55,11 +55,11 @@ class APIConnector {
       url: path,
       headers
     }
-    if (Object.keys(params).length) axiosParams.params = params
-    if (Object.keys(payload).length) axiosParams.data = payload
+    if (Object.keys(params).length) { axiosParams.params = params }
+    if (Object.keys(payload).length) { axiosParams.data = payload }
     
     if (this.debug || debug) {
-      console.info('ac-api-connector | Request | %j', axiosParams)
+      console.warn('ac-api-connector | Request | %j', axiosParams)
     }
     try {
       const pick = ({ status, statusText, headers, config, data }) => ({ status, statusText, responseHeaders: headers, headers: config?.headers, data })
@@ -67,14 +67,14 @@ class APIConnector {
       const filteredResponse = pick(response)
 
       if (this.debug || debug) {
-        console.info('ac-api-connector | Response | Status %s | Reuse socket %s | Total sockets %s', response?.status, response?.request?.reusedSocket, this.httpsAgent?.totalSocketCount)
+        console.warn('ac-api-connector | Response | Status %s | Reuse socket %s | Total sockets %s', response?.status, response?.request?.reusedSocket, this.httpsAgent?.totalSocketCount)
         filteredResponse.reuseSocket = response?.request?.reusedSocket
       }
 
       return filteredResponse
     }
     catch(e) {
-      if (returnError) throw e
+      if (returnError) { throw e }
 
       const error = e?.response?.data?.message || e?.response?.statusText || e?.message || e 
       const config = e?.response?.config || {}
