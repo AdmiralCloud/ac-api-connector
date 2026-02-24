@@ -1,4 +1,26 @@
 
+## [1.0.19](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.18..v1.0.19) (2026-02-24 15:23:25)
+
+
+### Bug Fix
+
+* **Misc:** Package updates | MP | [8a7c5bb58957cfe48c85dd30adbe2d44aea49a8f](https://github.com/admiralcloud/ac-api-connector/commit/8a7c5bb58957cfe48c85dd30adbe2d44aea49a8f)    
+Package updates  
+Related issues:
+### Style
+
+* **Misc:** Lint fix | MP | [03a41f925170dbc0a7b8fe82f1ec76ad7970ae10](https://github.com/admiralcloud/ac-api-connector/commit/03a41f925170dbc0a7b8fe82f1ec76ad7970ae10)    
+Lint fix  
+Related issues:
+### Chores
+
+* **Misc:** Updated tests | MP | [f0f4e3a7c136537df9e57f35efd706a25936ebea](https://github.com/admiralcloud/ac-api-connector/commit/f0f4e3a7c136537df9e57f35efd706a25936ebea)    
+Do not test Node 18 any longer.  
+Related issues:
+* **Connector:** Add permission to workflow | MP | [5777222caa18f560982e50c3596b54678b92777a](https://github.com/admiralcloud/ac-api-connector/commit/5777222caa18f560982e50c3596b54678b92777a)    
+Add permission to workflow  
+Related issues:
+
 ## [1.0.18](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.17..v1.0.18) (2026-02-03 08:37:04)
 
 
