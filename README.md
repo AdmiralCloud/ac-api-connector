@@ -1,7 +1,7 @@
 # ac-api-connector
 Use this class to connect to AdmiralCloud APIs
 
-[![Node.js CI](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/node.js.yml/badge.svg)](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/node.js.yml/badge.svg)](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/node.js.yml) [![CodeQL](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/AdmiralCloud/ac-api-connector/actions/workflows/github-code-scanning/codeql)
 
 # BREAKING CHANGES Version 1
 Starting with version 1 we use ac-signature with signature version 5 which does not require controller and action but use the path instead.

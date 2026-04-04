@@ -9,14 +9,14 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "ac-signature": "^5.0.2",
+    "ac-signature": "^5.0.3",
     "axios": "^1.14.0"
   },
   "devDependencies": {
-    "ac-semantic-release": "^0.4.11",
+    "ac-semantic-release": "^1.0.1",
     "c8": "^11.0.0",
     "chai": "^4.5.0",
-    "eslint": "^10.1.0",
+    "eslint": "^10.2.0",
     "globals": "^17.4.0",
     "mocha": "^11.7.5"
   },
