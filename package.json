@@ -9,11 +9,11 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "ac-signature": "^5.0.3",
+    "ac-signature": "^5.0.4",
     "axios": "^1.15.0"
   },
   "devDependencies": {
-    "ac-semantic-release": "^1.0.1",
+    "ac-semantic-release": "^1.0.2",
     "c8": "^11.0.0",
     "chai": "^4.5.0",
     "eslint": "^10.2.0",
