@@ -311,10 +311,10 @@ ac-semantic-release@^1.0.2:
     inquirer "^12.11.1"
     lodash.merge "^4.6.2"
 
-ac-signature@^5.0.5:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/ac-signature/-/ac-signature-5.0.5.tgz#d396af5a8dc2cf90a5e9cc69e9fd8572e19dbacd"
-  integrity sha512-BYNOQ8oQ84I2jrwiEjmpUQuCVHj9m4nbrrmgUiPgsD3uH8p2WcD3JmVVbNzD9iCVqC7CGpd/CO79ir/EqXiCFw==
+ac-signature@^5.0.7:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/ac-signature/-/ac-signature-5.0.7.tgz#21db433910493d7d888b605a159096268682b315"
+  integrity sha512-nmNEjTJBdGeS5O1xcI6lAsdMzWm/M+rYi9ps0o8XuSjdT+wWJv66E5BARIgdvmgIoOsEC79/SfTA1D+17Mgjsw==
   dependencies:
     lodash "^4.18.1"
     superagent "^10.3.0"
@@ -1189,10 +1189,10 @@ minimatch@^10.2.1, minimatch@^10.2.2, minimatch@^10.2.4, minimatch@^9.0.4, minim
   resolved "https://registry.yarnpkg.com/minipass/-/minipass-7.1.3.tgz#79389b4eb1bb2d003a9bba87d492f2bd37bdc65b"
   integrity sha512-tEBHqDnIoM/1rXME1zgka9g6Q2lcoCkxHLuc7ODJ5BxbP5d4c2Z5cGgtXAku59200Cx7diuHTOYfSBD8n6mm8A==
 
-mocha@^11.7.5:
-  version "11.7.5"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-11.7.5.tgz#58f5bbfa5e0211ce7e5ee6128107cefc2515a627"
-  integrity sha512-mTT6RgopEYABzXWFx+GcJ+ZQ32kp4fMf0xvpZIIfSq9Z8lC/++MtcCnQ9t5FP2veYEP95FIYSvW+U9fV4xrlig==
+mocha@^11.7.6:
+  version "11.7.6"
+  resolved "https://registry.yarnpkg.com/mocha/-/mocha-11.7.6.tgz#ebbe22989d04cbb9424a36307320476624c41a33"
+  integrity sha512-nS9xOGbw2I3cjCpxwZAEJ9xK9lmJ08vEkQvLtz4du9ZrF9UrjRpeJGiIgl2Z+Qs++pmB4ecDe48Fwsh+j+j7xA==
   dependencies:
     browser-stdout "^1.3.1"
     chokidar "^4.0.1"
