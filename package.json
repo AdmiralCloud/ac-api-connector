@@ -9,15 +9,15 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "ac-signature": "^5.0.7",
-    "axios": "^1.18.0"
+    "ac-signature": "^5.0.10",
+    "axios": "^1.18.1"
   },
   "devDependencies": {
     "ac-semantic-release": "^1.0.2",
     "c8": "^11.0.0",
     "chai": "^4.5.0",
-    "eslint": "^10.5.0",
-    "globals": "^17.6.0",
+    "eslint": "^10.6.0",
+    "globals": "^17.7.0",
     "mocha": "^11.7.6"
   },
   "scripts": {
