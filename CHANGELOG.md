@@ -1,3 +1,18 @@
+## [1.0.31](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.30..v1.0.31) (2026-07-29 13:57:08)
+
+
+### Bug Fix
+
+
+* **Connector:** Allow more options for connector | MP | [7b0a3cd79839e93b96ba822f0c7e4e331c055cf1](https://github.com/admiralcloud/ac-api-connector/commit/7b0a3cd79839e93b96ba822f0c7e4e331c055cf1)    
+Allow more HTTP options for connector  
+Related issues:
+### Chores
+
+
+* **Connector:** Updated packages | MP | [0f7a4c68578588d0c68e8c78ab4c45c7327144ed](https://github.com/admiralcloud/ac-api-connector/commit/0f7a4c68578588d0c68e8c78ab4c45c7327144ed)    
+Updated packages  
+Related issues:
 ## [1.0.30](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.29..v1.0.30) (2026-07-12 07:44:44)
 
 
