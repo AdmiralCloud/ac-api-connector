@@ -9,16 +9,16 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "ac-signature": "^5.0.11",
-    "axios": "^1.18.1"
+    "ac-signature": "^5.0.13",
+    "axios": "^1.19.0"
   },
   "devDependencies": {
     "ac-semantic-release": "^1.0.2",
     "c8": "^11.0.0",
     "chai": "^4.5.0",
-    "eslint": "^10.7.0",
-    "globals": "^17.7.0",
-    "mocha": "^11.7.6"
+    "eslint": "^10.9.0",
+    "globals": "^17.11.0",
+    "mocha": "^11.8.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --slow 1000 --colors ./test.js || :",
@@ -26,12 +26,13 @@
   },
   "resolutions": {
     "braces": "^3.0.3",
-    "brace-expansion": "^5.0.5",
+    "brace-expansion": "^5.0.9",
     "mocha/diff": "^8.0.3",
     "mocha/serialize-javascript": "^7.0.5",
     "minimatch": "^10.2.1",
     "axios/follow-redirects": "^1.16.0",
-    "mocha/js-yaml": "^4.2.0",
+    "mocha/js-yaml": "^4.3.1",
+    "minimatch/brace-expansion": "^5.0.9",
     "axios/form-data": "^4.0.6",
     "ac-signature/superagent/form-data": "^4.0.6"
   },
