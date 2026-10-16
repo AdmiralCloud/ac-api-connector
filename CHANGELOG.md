@@ -1,3 +1,12 @@
+## [1.0.34](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.33..v1.0.34) (2026-10-06 17:38:50)
+
+
+### Chores
+
+
+* **Misc:** Updated packages | MP | [300735bc3932a04bc7c5da1998e9e7bb9bf31201](https://github.com/admiralcloud/ac-api-connector/commit/300735bc3932a04bc7c5da1998e9e7bb9bf31201)    
+Updated packages  
+Related issues:
 ## [1.0.33](https://github.com/admiralcloud/ac-api-connector/compare/v1.0.32..v1.0.33) (2026-08-23 11:28:35)
 
 
